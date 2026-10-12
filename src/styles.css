@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+:root {
+  font-family: "DM Sans", sans-serif;
+  color: #222421;
+  background: #f5f6f8;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-optical-sizing: auto;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0;
+  background-image: radial-gradient(#dfe2e6 0.7px, transparent 0.7px);
+  background-size: 18px 18px;
+}
+
+button,
+a {
+  font: inherit;
+}
+
+.page-shell {
+  width: min(100% - 48px, 700px);
+  margin: 0 auto;
+}
+
+.topbar {
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e1e4e8;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: -0.7px;
+}
+
+.brand-mark {
+  display: grid;
+  width: 32px;
+  height: 32px;
+  place-items: center;
+  border-radius: 9px;
+  background: #232720;
+  color: #d9fb71;
+  font-family: "DM Mono", monospace;
+  font-size: 12px;
+  letter-spacing: -1px;
+}
+
+.brand-light {
+  color: #7b8078;
+  font-weight: 500;
+}
+
+.live-indicator,
+.feed-meta,
+.eyebrow,
+.footer {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 1px;
+}
+
+.live-indicator {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #666b62;
+}
+
+.live-dot,
+.feed-meta-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #91bd42;
+}
+
+.live-dot {
+  box-shadow: 0 0 0 3px #91bd4220;
+}
+
+.intro {
+  padding: 71px 0 33px;
+}
+
+.eyebrow {
+  margin: 0 0 19px;
+  color: #73796f;
+}
+
+h1 {
+  margin: 0;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(43px, 8vw, 61px);
+  line-height: 1.02;
+  letter-spacing: -3.8px;
+  font-weight: 600;
+}
+
+h1 span {
+  color: #959a92;
+}
+
+.intro-copy {
+  margin: 20px 0 26px;
+  color: #72766f;
+  font-size: 14px;
+}
+
+.feed-meta {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #777d73;
+  font-size: 9px;
+}
+
+.feed-meta-dot {
+  width: 6px;
+  height: 6px;
+}
+
+.meta-divider {
+  color: #c1c4bf;
+}
+
+.feed {
+  display: grid;
+  gap: 11px;
+  min-height: 180px;
+}
+
+.commit-card {
+  padding: 18px 20px 15px;
+  border: 1px solid #e5e7e9;
+  border-radius: 11px;
+  background: rgb(255 255 255 / 86%);
+  box-shadow: 0 3px 10px rgb(34 36 33 / 2%);
+  transition: border-color 160ms ease, transform 160ms ease;
+}
+
+.commit-card:hover {
+  transform: translateY(-2px);
+  border-color: #cbd3bf;
+}
+
+.card-topline,
+.card-footer {
+  display: flex;
+  align-items: center;
+}
+
+.card-topline {
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.repo-label,
+.card-topline time,
+.commit-sha {
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+}
+
+.repo-label {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  min-width: 0;
+  overflow: hidden;
+  color: #60665c;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.repo-icon {
+  color: #8baa50;
+  font-size: 13px;
+}
+
+.card-topline time {
+  flex: 0 0 auto;
+  color: #92968f;
+}
+
+.commit-message {
+  margin: 15px 0 18px;
+  overflow-wrap: anywhere;
+  color: #292c27;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.card-footer {
+  gap: 8px;
+}
+
+.author-avatar {
+  display: grid;
+  width: 23px;
+  height: 23px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e8eddf;
+  color: #606c49;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.author-name {
+  color: #646960;
+  font-size: 11px;
+}
+
+.commit-sha {
+  margin-left: auto;
+  color: #7f857a;
+  text-decoration: none;
+}
+
+.commit-sha:hover {
+  color: #4b6527;
+}
+
+.empty-state {
+  display: flex;
+  min-height: 180px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 28px;
+  border: 1px dashed #d8dcd5;
+  border-radius: 11px;
+  color: #777d73;
+  text-align: center;
+}
+
+.empty-icon {
+  display: grid;
+  width: 31px;
+  height: 31px;
+  margin-bottom: 10px;
+  place-items: center;
+  border-radius: 50%;
+  background: #e9eddf;
+  color: #69784b;
+  font-family: "DM Mono", monospace;
+  font-size: 17px;
+}
+
+.empty-state h2 {
+  margin: 0;
+  color: #383c34;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+}
+
+.empty-state p {
+  max-width: 360px;
+  margin: 7px 0 0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.error-state .empty-icon {
+  background: #fae8e5;
+  color: #a3473d;
+}
+
+.retry-button {
+  margin-top: 13px;
+  padding: 7px 12px;
+  border: 1px solid #d8dcd5;
+  border-radius: 6px;
+  background: white;
+  color: #383c34;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.loader {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 12px;
+  border: 2px solid #e0e4db;
+  border-top-color: #81984e;
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 25px 0 34px;
+  color: #969b93;
+  font-size: 8px;
+}
+
+@media (max-width: 520px) {
+  .page-shell {
+    width: min(100% - 32px, 700px);
+  }
+
+  .topbar {
+    height: 72px;
+  }
+
+  .intro {
+    padding-top: 55px;
+  }
+
+  h1 {
+    letter-spacing: -2.6px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
